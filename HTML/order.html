@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You - Pizza Hut</title>
+    <link rel="stylesheet" href="order.css">
+    <script src="order.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <h1>🍕 Pizza Hut</h1>
+    </header>
+
+    <div class="thankyou-container">
+        <div class="thankyou-box">
+            <h1>Thank You! 🎉</h1>
+            <p>Your order is confirmed and being prepared.</p>
+
+            <h3>🧾 Order Items</h3>
+            <ul id="orderItems"></ul>
+
+            <p><strong>Order ID:</strong> #<span id="orderId"></span></p>
+            <p><strong>Total Paid:</strong> $<span id="totalAmount"></span></p>
+
+            <button onclick="goBack()">Order More</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

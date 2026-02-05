@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Hut Order</title>
+    <link rel="stylesheet" href="pizzahut.css">
+    <script src="pizzahut.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <img src="pizzahut-logo.png" alt="Pizza Hut Logo" class="logo">
+        <div>
+            <h1>Pizza Hut</h1>
+            <p>Delicious Moments Delivered</p>
+        </div>
+    </header>
+
+    <section class="menu">
+
+        <h2>🍕 Pizzas</h2>
+        <div class="items-grid">
+            <div class="item-card">
+                <img src="cheesepizza.jpg">
+                <div class="item-name">Cheese Pizza</div>
+                <span class="price">$35</span>
+                <button onclick="addToCart('Cheese Pizza',35)">Add</button>
+            </div>
+
+            <div class="item-card">
+                <img src="veggiesupreme.jpg">
+                <div class="item-name">Veggie Supreme</div>
+                <span class="price">$20</span>
+                <button onclick="addToCart('Veggie Supreme',20)">Add</button>
+            </div>
+
+            <div class="item-card">
+                <img src="chickentikka.jpg">
+                <div class="item-name">Chicken Tikka Pizza</div>
+                <span class="price">$30</span>
+                <button onclick="addToCart('Chicken Tikka Pizza',30)">Add</button>
+            </div>
+
+            <div class="item-card">
+                <img src="pepperonifeast.jpg">
+                <div class="item-name">Pepperoni Feast</div>
+                <span class="price">$25</span>
+                <button onclick="addToCart('Pepperoni Feast',25)">Add</button>
+            </div>
+        </div>
+
+        <h2>🥤 Beverages</h2>
+        <div class="items-grid">
+            <div class="item-card">
+                <img src="thumpsup.jpg">
+                <div class="item-name">Thums Up</div>
+                <span class="price">$15</span>
+                <button onclick="addToCart('Thums Up',15)">Add</button>
+            </div>
+            <div class="item-card">
+                <img src="sprite.jpg">
+                <div class="item-name">Sprite</div>
+                <span class="price">$15</span>
+                <button onclick="addToCart('Sprite',15)">Add</button>
+            </div>
+            <div class="item-card">
+                <img src="cocacola.jpg">
+                <div class="item-name">Coca Cola</div>
+                <span class="price">$15</span>
+                <button onclick="addToCart('Coca Cola',15)">Add</button>
+            </div>
+            <div class="item-card">
+                <img src="fanta.jpg">
+                <div class="item-name">Fanta</div>
+                <span class="price">$15</span>
+                <button onclick="addToCart('Fanta',15)">Add</button>
+            </div>
+        </div>
+
+        <h2>🍰 Desserts</h2>
+        <div class="items-grid">
+            <div class="item-card">
+                <img src="chocolava.jpg">
+                <div class="item-name">Choco Lava Cake</div>
+                <span class="price">$10</span>
+                <button onclick="addToCart('Choco Lava Cake',10)">Add</button>
+            </div>
+            <div class="item-card">
+                <img src="brownie.jpg">
+                <div class="item-name">Chocolate Brownie</div>
+                <span class="price">$12</span>
+                <button onclick="addToCart('Chocolate Brownie',12)">Add</button>
+            </div>
+            <div class="item-card">
+                <img src="tiramisu.jpg">
+                <div class="item-name">Tiramisu</div>
+                <span class="price">$14</span>
+                <button onclick="addToCart('Tiramisu',14)">Add</button>
+            </div>
+            <div class="item-card">
+                <img src="croissant.jpg">
+                <div class="item-name">Croissant</div>
+                <span class="price">$15</span>
+                <button onclick="addToCart('Croissant',15)">Add</button>
+            </div>
+        </div>
+
+        <h2>🔥 Combos</h2>
+        <div class="items-grid">
+            <div class="item-card">
+                <img src="pepsipizza.jpg">
+                <div class="item-name">Pizza + Pepsi Combo</div>
+                <span class="price">$45</span>
+                <button onclick="addToCart('Pizza + Pepsi Combo',45)">Add</button>
+            </div>
+            <div class="item-card">
+                <img src="combo2.jpg">
+                <div class="item-name">Pizza + Dessert Combo</div>
+                <span class="price">$50</span>
+                <button onclick="addToCart('Pizza + Dessert Combo',50)">Add</button>
+            </div>
+            <div class="item-card">
+                <img src="combofamily.jpg">
+                <div class="item-name">Family Combo</div>
+                <span class="price">$80</span>
+                <button onclick="addToCart('Family Combo',80)">Add</button>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="cart">
+        <h3>🛒 Cart</h3>
+        <ul id="cartItems"></ul>
+        <h3>Total: $ <span id="total">0</span></h3>
+        <button onclick="placeOrder()">Proceed to Order</button>
+    </div>
+
+    <div class="reviews">
+        <h3>🌟 Reviews</h3>
+        <p>⭐⭐⭐⭐ Good Quality</p>
+        <p>⭐⭐⭐ Need to improve delivery speed</p>
+        <p>⭐⭐⭐⭐⭐ Very Tasty</p>
+    </div>
+
+    <div id="ownerLoginBtn" onclick="window.location.href='pizzalogin.html'">Owner Login</div>
+</body>
+
+</html>

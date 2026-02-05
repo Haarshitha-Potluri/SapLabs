@@ -1,0 +1,79 @@
+ body {
+     font-family: Arial, sans-serif;
+     background: #fff5f5;
+     margin: 0;
+     padding: 20px;
+ }
+
+ header {
+     background: #d62300;
+     color: white;
+     padding: 15px;
+     text-align: center;
+ }
+
+ .order-box {
+     background: white;
+     margin: 20px auto;
+     padding: 15px;
+     border-radius: 10px;
+     max-width: 600px;
+     border-left: 6px solid #d62300;
+ }
+
+ h2 {
+     color: #d62300;
+ }
+
+ ul {
+     padding-left: 20px;
+ }
+
+ .time {
+     font-size: 14px;
+     color: gray;
+ }
+
+ .empty {
+     text-align: center;
+     font-size: 18px;
+     margin-top: 40px;
+ }
+
+ #userLoginBtn {
+     position: fixed;
+     top: 75px;
+     right: 50px;
+     background: #d62300;
+     color: white;
+     padding: 8px 16px;
+     font-weight: bold;
+     border-radius: 25px;
+     cursor: pointer;
+     z-index: 1000;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+     transition: 0.3s ease;
+     font-family: Arial, sans-serif;
+     font-size: 14px;
+ }
+
+ #userLoginBtn:hover {
+     background: rgba(14, 176, 216, 0.8);
+     transform: scale(1.05);
+ }
+
+ .complete-btn {
+     background: #28a745;
+     color: white;
+     border: none;
+     padding: 8px 14px;
+     border-radius: 6px;
+     cursor: pointer;
+     font-weight: bold;
+     transition: 0.3s ease;
+ }
+
+ .complete-btn:hover {
+     background: #218838;
+     transform: scale(1.05);
+ }

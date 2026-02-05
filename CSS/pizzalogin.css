@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.site-header {
+    background: #d62300;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.logo {
+    height: 50px;
+    animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.main {
+    min-height: calc(100vh - 80px);
+    background: url("pizzahutbg.avif") center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 250px;
+}
+
+.login-box {
+    background: antiquewhite;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    animation: floatUp 1.2s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.login-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.field {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    transform: scale(1.03);
+}
+
+.agree {
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 8px 16px;
+    background: #d62300;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(14, 176, 216, 0.8);
+    background-color: rgba(14, 176, 216, 0.8);
+}
+
+.error {
+    color: yellow;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .main {
+        justify-content: center;
+        padding-right: 0;
+    }
+}

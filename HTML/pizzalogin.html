@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Hut Login</title>
+    <link rel="stylesheet" href="pizzalogin.css">
+    <script src="pizzalogin.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <img src="pizzahut-logo.png" alt="Pizza Hut Logo" class="logo">
+        <div class="header-text">
+            <h1>Pizza Hut</h1>
+            <p>Delicious Moments Delivered</p>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="login-box">
+            <h1>Login</h1>
+
+            <form id="loginForm" novalidate>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <div class="error" id="emailError"></div>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <div class="error" id="passwordError"></div>
+                </div>
+
+                <div class="agree">
+                    <label>
+                        <input type="checkbox" id="agree">
+                        I agree to the terms & conditions
+                    </label>
+                    <div class="error" id="agreeError"></div>
+                </div>
+
+                <div class="buttons">
+                    <button type="button" class="btn" onclick="login('user')">
+                        Login as User
+                    </button>
+                    <button type="button" class="btn" onclick="login('owner')">
+                        Login as Owner
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

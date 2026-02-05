@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #641313;
+}
+
+.site-header {
+    background: #d62300;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.menu {
+    padding: 25px;
+}
+
+.menu h2 {
+    color: #d62300;
+    border-bottom: 3px solid #d62300;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.item-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    border-top: 6px solid #d62300;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.item-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.item-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.price {
+    color: #d62300;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.item-card button {
+    background: #d62300;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.item-card button:hover {
+    background: rgb(40, 71, 245);
+    transform: scale(1.1);
+}
+
+.item-card:hover {
+    background: #f0a799;
+}
+
+.cart {
+    background: white;
+    margin: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cart h3 {
+    margin-top: 0;
+    color: #d62300;
+}
+
+.cart ul {
+    padding-left: 20px;
+}
+
+.cart button {
+    margin-top: 10px;
+    background: #d62300;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart button:hover {
+    background: rgb(40, 71, 245);
+}
+
+.item-card::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.item-card:hover::after {
+    opacity: 1;
+}
+
+.items-grid .item-card:nth-child(1)::after {
+    content: "Classic cheese pizza with rich mozzarella.";
+}
+
+.items-grid .item-card:nth-child(2)::after {
+    content: "Fresh veggies on a crispy golden crust.";
+}
+
+.items-grid .item-card:nth-child(3)::after {
+    content: "Spicy chicken tikka with bold flavors.";
+}
+
+.items-grid .item-card:nth-child(4)::after {
+    content: "Pepperoni loaded with extra cheese.";
+}
+
+#ownerLoginBtn {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 1000;
+    background: #d62300;
+    color: white;
+    padding: 10px 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: 0.3s ease;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+#ownerLoginBtn:hover {
+    background: rgba(14, 176, 216, 0.8);
+    transform: scale(1.05);
+}
+
+#cartItems li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+#cartItems li .qty-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+#cartItems li button.increase:hover,
+#cartItems li button.decrease:hover {
+    background: rgba(14, 176, 216, 0.8);
+}
+
+.reviews {
+    background: white;
+    margin: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reviews h3 {
+    color: #d62300
+}
