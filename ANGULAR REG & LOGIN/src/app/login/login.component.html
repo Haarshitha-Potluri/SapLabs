@@ -1,0 +1,17 @@
+<div class="bg">
+  <div class="card">
+    <h2>Login</h2>
+
+
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <label>Email</label>
+      <input type="email" formControlName="email" />
+
+      <label>Password</label>
+      <input type="password" formControlName="password" />
+
+      <button type="submit" class="btn login-btn">Login</button>
+    </form>
+  </div>
+</div>

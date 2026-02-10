@@ -1,0 +1,86 @@
+<div class="bg">
+  <div class="card">
+    <h2>Register</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+      <div class="row">
+        <div class="input-group">
+          <label>First Name</label>
+          <input formControlName="firstName" />
+        </div>
+
+        <div class="input-group">
+          <label>Last Name</label>
+          <input formControlName="lastName" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-group">
+          <label>Date of Birth</label>
+          <input type="date" formControlName="dob" (change)="calculateAge()" />
+        </div>
+
+        <div class="input-group">
+          <label>Age</label>
+          <input [value]="age" readonly />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-group">
+          <label>Gender</label>
+          <select formControlName="gender">
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>Mobile</label>
+          <input formControlName="mobile" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-group">
+          <label>Email</label>
+          <input formControlName="email" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" formControlName="password" />
+        </div>
+
+        <div class="input-group">
+          <label>Confirm Password</label>
+          <input type="password" formControlName="confirmPassword" />
+        </div>
+      </div>
+
+      <div class="captcha-box">
+        <span class="captcha-text">{{ captchaText }}</span>
+        <button type="button" class="refresh-btn" (click)="refreshCaptcha()">Refresh</button>
+      </div>
+      <div class="captcha">
+        <label>Captcha</label>
+
+
+        <input formControlName="captcha" placeholder="Enter captcha text" />
+      </div>
+
+
+      <div class="buttons">
+        <button type="submit" class="btn submit">Submit</button>
+        <button type="button" class="btn reset" (click)="onReset()">Reset</button>
+      </div>
+
+    </form>
+  </div>
+</div>
