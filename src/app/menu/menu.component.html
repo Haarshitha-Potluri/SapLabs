@@ -1,0 +1,20 @@
+<h1 class="title">Our Menu🍽</h1>
+
+<div *ngIf="showMessage" class="toast">
+    {{ messageText }}
+</div>
+
+<div *ngFor="let category of menuCategories">
+
+    <h2 class="category-title">{{ category.category }}</h2>
+
+    <div class="menu-container">
+        <div class="card" *ngFor="let item of category.items">
+            <img [src]="item.image" alt="food">
+            <h3>{{ item.name }}</h3>
+            <p>$ {{ item.price }}</p>
+            <button (click)="addToCart(item)">Add to Cart</button>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,23 @@
+
+<div class="success-container">
+    <h1>🎉 Order Placed Successfully!</h1>
+    <p>Thank you for your order. Here are your order details:</p>
+
+    <p><strong>Order ID:</strong> {{orderId}}</p>
+    <p><strong>Order Time:</strong> {{orderTime}}</p>
+    <p><strong>Payment Method:</strong> {{paymentMethod}}</p>
+
+    <div *ngFor="let item of orderItems" class="order-item">
+        <img [src]="item.image" alt="{{item.name}}">
+        <div class="item-details">
+            <h3>{{item.name}}</h3>
+            <p>$ {{item.price}}</p>
+        </div>
+    </div>
+
+    <h2>Total Amount: $ {{totalAmount}}</h2>
+
+    <a routerLink="/menu">
+        <button>Order More</button>
+    </a>
+</div>
